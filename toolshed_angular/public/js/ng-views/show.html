@@ -1,0 +1,22 @@
+<h2>{{vm.tool.name}}</h2>
+<h3><p>Category: {{vm.tool.category}}</p>
+<p>Lent By: {{vm.tool.owner}}</p>
+<p>Borrowing Conditions: {{vm.tool.condition}}</p>
+
+      <h2>Edit Song</h2>
+
+      <form ng-submit="vm.update()">
+        <input placeholder="Name" ng-model="vm.tool.name">
+        <input placeholder="Tool Category" ng-model="vm.tool.category">
+        <input placeholder="Owned By" ng-model="vm.tool.owner">
+        <input placeholder="Borrowing Conditions" ng-model="vm.tool.conditions">
+        <button type="submit">Update Tool</button>
+      </form>
+
+
+
+    <button ng-click="vm.delete(tool)">Delete Song</button>
+
+
+
+<h2>

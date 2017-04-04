@@ -1,0 +1,19 @@
+<h2>All Available Tools</h2>
+
+<div data-ng-repeat="tool in vm.tools">
+  <p>
+    <a data-ui-sref="toolShow({id: tool.$id})">{{tool.name}}</a>
+  </p>
+</div>
+
+
+<h2>List a Tool to Lend</h2>
+
+<form ng-submit="vm.create()">
+  <input placeholder="Type of Tool" ng-model="vm.newTool.name">
+  <input placeholder="Category" ng-model="vm.newTool.category">
+  <input placeholder="Condition for borrowing" ng-model="vm.newTool.condition">
+  <input placeholder="Availability" ng-model="vm.newTool.availability">
+  <input placeholder="Owner Name" ng-model="vm.newTool.owner">
+  <button type="submit">Add Tool/button>
+</form>

@@ -1,0 +1,70 @@
+{
+  "tools" : [ {
+    "name": "Saws-all",
+    "category": "power tool",
+    "condition": "$5",
+    "availability": "true",
+    "owner": "Bob"
+    }, {
+    "name": "Pressure Washer",
+    "category": "power tool",
+    "condition": "6 Pack",
+    "availability": "true",
+    "owner": "Mary"
+    }, {
+    "name": "Hammer",
+    "category": "hand tool",
+    "condition": "Replace if lost or broken",
+    "availability": "true",
+    "owner": "Fred"
+    }, {
+    "name": "2 inch socket",
+    "category": "hand tool",
+    "condition": "Replace if lost or broken",
+    "availability": "true",
+    "owner": "Bruce"
+    }, {
+    "name": "Rotor Tiller",
+    "category": "power tool",
+    "condition": "Fill Gas",
+    "availability": "true",
+    "owner": "Bob"
+    }, {
+    "name": "Circular Saw",
+    "category": "power tool",
+    "condition": "Replace Blades",
+    "availability": "true",
+    "owner": "Bruce"
+    }, {
+    "name": "Vice Grips",
+    "category": "hand tool",
+    "condition": "$2",
+    "availability": "true",
+    "ownder": "Jessica"
+    }, {
+    "name": "Hedge Trimmer",
+    "category": "power tool",
+    "condition": "$5",
+    "availability": "true",
+    "owner": "Sam"
+    }, {
+    "name": "Air Compressor",
+    "category": "power tool",
+    "condition": "Replace if broken",
+    "availability": "true",
+    "owner": "George"
+    }, {
+    "name": "Torque Wrench",
+    "category": "hand tool",
+    "condition": "$3",
+    "availability": "true",
+    "owner": "Jessica"
+    }, {
+    "name": "Drywall Knife",
+    "category": "hand tool",
+    "condition": "Replace blade",
+    "availability": "true",
+    "owner": "Byron"
+    }
+  ]
+}
