@@ -2,7 +2,7 @@
 
 
 angular
-  .module("tools", [
+  .module("toolshed", [
     "ui.router",
     "firebase"
   ])
@@ -11,6 +11,7 @@ angular
     RouterFunction
   ])
   .controller("ToolController", [
+    "$firebaseArray",
     ToolControllerFunction
   ])
   .controller("ToolIndexController", [
@@ -37,6 +38,10 @@ function RouterFunction($stateProvider){
     controller: "ToolShowController",
     controllerAs: "vm"
   })
+}
+
+function ToolsControllerFunction($firebaseArray){
+  let ref = firebase.database().ref().child("tools");
 }
 
 function ToolIndexControllerFunction($firebaseArray){
