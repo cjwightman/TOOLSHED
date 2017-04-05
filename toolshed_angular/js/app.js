@@ -63,9 +63,9 @@ function RouterFunction($stateProvider){
   })
 }
 
-function ToolControllerFunction($firebaseArray){
-  let ref = firebase.database().ref().child("tools");
-}
+// function ToolControllerFunction($firebaseArray){
+//   let ref = firebase.database().ref().child("tools");
+// }
 
 function ToolIndexControllerFunction($firebaseArray){
   let ref = firebase.database().ref().child("tools");
@@ -95,7 +95,8 @@ function ToolIndexControllerFunction($firebaseArray){
   this.create = function() {
     this.tools.$add(this.newTool).then( () => this.newTool = {})
   }
-
+}
+//
   function ToolControllerFunction($firebaseArray){
     let ref = firebase.database().ref().child("tools");
     this.tools= $firebaseArray(ref);
