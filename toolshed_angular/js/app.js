@@ -63,18 +63,18 @@ function RouterFunction($stateProvider){
   })
 }
 
-  // function ToolControllerFunction($firebaseArray){
-  //   let ref = firebase.database().ref().child("tools");
-  // }
+function ToolControllerFunction($firebaseArray){
+  let ref = firebase.database().ref().child("tools");
+}
 
-  function ToolIndexControllerFunction($firebaseArray){
-    let ref = firebase.database().ref().child("tools");
-    this.tools = $firebaseArray(ref);
+function ToolIndexControllerFunction($firebaseArray){
+  let ref = firebase.database().ref().child("tools");
+  this.tools = $firebaseArray(ref);
 
-      this.create = function(){
-        this.$add(this.newTool).then( () => this.newTool = {} )
-      }
+  this.create = function(){
+    this.$add(this.newTool).then( () => this.newTool = {} )
   }
+}
   function ToolShowControllerFunction($stateParams, $firebaseObject){
       // This time, ref contains a reference to a specific grumble.
       let ref = firebase.database().ref().child("tools/" + $stateParams.id);
@@ -90,14 +90,14 @@ function RouterFunction($stateProvider){
         this.tool.$remove(tool);
       }
   }
-  function ToolNewControllerFunction($firebaseObject, $state) {
+  function toolNewControllerFunction($firebaseObject, $state) {
   // creating a new expense
-    this.create = function() {
-      this.tools.$add(this.newTool).then( () => this.newTool = {})
-    }
+  this.create = function() {
+    this.tools.$add(this.newTool).then( () => this.newTool = {})
   }
 
-//   function ToolControllerFunction($firebaseArray){
-//     let ref = firebase.database().ref().child("tools");
-//     this.tools= $firebaseArray(ref);
-// }
+  function ToolControllerFunction($firebaseArray){
+    let ref = firebase.database().ref().child("tools");
+    this.tools= $firebaseArray(ref);
+
+}
