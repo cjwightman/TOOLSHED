@@ -3,19 +3,19 @@
 <p>Lent By: {{vm.tool.owner}}</p>
 <p>Borrowing Conditions: {{vm.tool.condition}}</p>
 
-      <h2>Edit Song</h2>
+      <h2>Edit Tool</h2>
 
       <form ng-submit="vm.update()">
-        <input placeholder="Name" ng-model="vm.tool.name">
-        <input placeholder="Tool Category" ng-model="vm.tool.category">
-        <input placeholder="Owned By" ng-model="vm.tool.owner">
-        <input placeholder="Borrowing Conditions" ng-model="vm.tool.conditions">
+        <input type="text" placeholder="Name" ng-model="vm.tool.name">
+        <input type="text" placeholder="Tool Category" ng-model="vm.tool.category">
+        <input type="text" placeholder="Owned By" ng-model="vm.tool.owner">
+        <input type="text" placeholder="Borrowing Conditions" ng-model="vm.tool.condition">
         <button type="submit">Update Tool</button>
       </form>
 
 
 
-    <button ng-click="vm.delete(tool)">Delete Song</button>
+    <button ng-click="vm.delete(tool)">Delete Tool</button>
 
 
 

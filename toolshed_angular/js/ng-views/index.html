@@ -10,10 +10,10 @@
 <h2>List a Tool to Lend</h2>
 
 <form ng-submit="vm.create()">
-  <input placeholder="Type of Tool" ng-model="vm.newTool.name">
-  <input placeholder="Category" ng-model="vm.newTool.category">
-  <input placeholder="Condition for borrowing" ng-model="vm.newTool.condition">
-  <input placeholder="Availability" ng-model="vm.newTool.availability">
-  <input placeholder="Owner Name" ng-model="vm.newTool.owner">
-  <button type="submit">Add Tool/button>
+  <input type="text" placeholder="Type of Tool" ng-model="vm.newTool.name">
+  <input type="text" placeholder="Category" ng-model="vm.newTool.category">
+  <input type="text" placeholder="Condition for borrowing" ng-model="vm.newTool.condition">
+  <input type="text" placeholder="Availability" ng-model="vm.newTool.availability">
+  <input type="text" placeholder="Owner Name" ng-model="vm.newTool.owner">
+  <button type="submit">Add Tool</button>
 </form>

@@ -23,12 +23,12 @@ angular
       "$firebaseObject",
       ToolShowControllerFunction
   ])
-  .controller("ToolEditController", [
-    '$firebaseObject',
-    '$stateParams',
-    'state',
-    ToolEditControllerFunction
-  ])
+  // .controller("ToolEditController", [
+  //   '$firebaseObject',
+  //   '$stateParams',
+  //   'state',
+  //   ToolEditControllerFunction
+  // ])
   .controller('ToolNewController', [
     '$firebaseObject',
     '$state',
@@ -72,7 +72,7 @@ function ToolIndexControllerFunction($firebaseArray){
   this.tools = $firebaseArray(ref);
 
   this.create = function(){
-    this.$add(this.newTool).then( () => this.newTool = {} )
+    this.tools.$add(this.newTool).then( () => this.newTool = {} )
   }
 }
   function ToolShowControllerFunction($stateParams, $firebaseObject){
@@ -90,7 +90,7 @@ function ToolIndexControllerFunction($firebaseArray){
         this.tool.$remove(tool);
       }
   }
-  function toolNewControllerFunction($firebaseObject, $state) {
+  function ToolNewControllerFunction($firebaseObject, $state) {
   // creating a new expense
   this.create = function() {
     this.tools.$add(this.newTool).then( () => this.newTool = {})
