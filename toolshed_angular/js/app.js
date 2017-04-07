@@ -97,10 +97,10 @@ function ToolIndexControllerFunction($firebaseArray){
   }
 }
   function ToolShowControllerFunction($stateParams, $firebaseObject){
-      // This time, ref contains a reference to a specific grumble.
+      // This time, ref contains a reference to a specific tool.
       let ref = firebase.database().ref().child("tools/" + $stateParams.id);
 
-      // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `vm.grumble`.
+      // Then we retrieve a $firebaseObject based on ref. Once that asynchronous action is done, we save the resulting grumble to `vm.tool`.
       $firebaseObject(ref).$loaded().then( tool => this.tool = tool )
 
       this.update = function(){
