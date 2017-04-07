@@ -3,6 +3,7 @@
 
 angular
   .module("toolshed", [
+    // "ui.bootstrap",
     "ui.router",
     "firebase"
   ])
@@ -22,6 +23,14 @@ angular
       "$stateParams",
       "$firebaseObject",
       ToolShowControllerFunction
+  ])
+  .controller("PowerToolIndexController", [
+    "$firebaseArray",
+    ToolIndexControllerFunction
+  ])
+  .controller("HandToolIndexController", [
+    "$firebaseArray",
+    ToolIndexControllerFunction
   ])
   // .controller("ToolEditController", [
   //   '$firebaseObject',
@@ -61,6 +70,18 @@ function RouterFunction($stateProvider){
     controller: "ToolEditController",
     controllerAs: "vm"
   })
+  .state("powertoolIndex", {
+    url: "/powertools",
+    templateUrl: "js/ng-views/powertools.html",
+    controller: "ToolIndexController",
+    controllerAs: "vm"
+  })
+  .state("handtoolIndex", {
+    url: "/handtools",
+    templateUrl: "js/ng-views/handtools.html",
+    controller: "ToolIndexController",
+    controllerAs: "vm"
+  })
 }
 
 // function ToolControllerFunction($firebaseArray){
@@ -87,7 +108,7 @@ function ToolIndexControllerFunction($firebaseArray){
       }
 
       this.delete = function(tool){
-        this.tool.$remove(tool);
+        this.tool.$remove(tool).then( () => $location.path('/toolshed'))
       }
   }
   function ToolNewControllerFunction($firebaseObject, $state) {

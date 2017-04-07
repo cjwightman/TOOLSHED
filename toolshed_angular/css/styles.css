@@ -1,0 +1,44 @@
+.page-header {
+  text-align: center;
+  background-color: lightblue;
+
+}
+p {
+  text-align: center;
+  font-size: 14px;
+}
+
+h1 {
+  display: inline-block;
+}
+
+h2 {
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.category-selection {
+  text-align: center;
+  display: block;
+}
+
+/*.navbar .container-fluid>.navbar-header {
+  float: right;
+  margin-right: 10px;
+}
+.navbar .navbar-nav {
+  float: left;
+  margin: 5px;
+}
+.nav>li {
+  float: right;
+}
+
+.breadcrumb > li + li:before {
+   color: #CCCCCC;
+   content: "/ ";
+   padding: 0 5px;
+}*/
